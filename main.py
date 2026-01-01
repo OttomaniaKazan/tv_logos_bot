@@ -10,6 +10,7 @@ from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
 from reportlab.lib.utils import ImageReader
 from fastapi import FastAPI, Request
+from aiogram.types import Update
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 
@@ -298,7 +299,8 @@ async def on_shutdown():
 @app.post(WEBHOOK_PATH)
 async def webhook(request: Request):
     update = await request.json()
-    await dp.feed_update(bot, update)
+    update_obj = Update.model_validate(update)
+    await dp.feed_update(bot, update_obj)
     return {"ok": True}
 
 @app.get("/")
