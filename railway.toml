@@ -1,0 +1,9 @@
+[build]
+builder = "NIXPACKS"
+
+[deploy]
+# Запуск бота
+startCommand = "python main.py"
+# Healthcheck (опционально)
+healthcheckPath = "/"
+healthcheckTimeout = 30
