@@ -289,12 +289,8 @@ dp.include_router(router)
 # === LIFESPAN (вместо on_event) ===
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Startup
-    await bot.set_webhook(WEBHOOK_URL + WEBHOOK_PATH)
-    print(f"✅ Webhook установлен: {WEBHOOK_URL + WEBHOOK_PATH}")
+    print("🚀 Бот запущен. Вебхук уже установлен.")
     yield
-    # Shutdown
-    await bot.delete_webhook(drop_pending_updates=True)
 
 app = FastAPI(lifespan=lifespan)
 
