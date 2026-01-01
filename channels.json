@@ -1,0 +1,632 @@
+{
+  "1-hd-music": {
+    "name": "1HD Music",
+    "aliases": ["1hd music", "1hd", "музыка 1hd", "один эйчди"],
+    "logos": ["logos/1-hd-music.png"]
+  },
+  "1-kbr": {
+    "name": "1 KBR",
+    "aliases": ["1kbr", "кбр", "канал братства россии"],
+    "logos": ["logos/1-kbr.png"]
+  },
+  "100": {
+    "name": "100",
+    "aliases": ["сто", "канал 100"],
+    "logos": ["logos/100.png"]
+  },
+  "12": {
+    "name": "12",
+    "aliases": ["двенадцать"],
+    "logos": ["logos/12.png"]
+  },
+  "21": {
+    "name": "21",
+    "aliases": ["двадцать один"],
+    "logos": ["logos/21.png"]
+  },
+  "24-doc": {
+    "name": "24 Док",
+    "aliases": ["24 док", "24doc", "док 24"],
+    "logos": ["logos/24_doc.png"]
+  },
+  "2x2": {
+    "name": "2x2",
+    "aliases": ["2х2", "два на два", "два икс два", "2x2", "дваиксдва"],
+    "logos": ["logos/2x2.png"]
+  },
+  "3": {
+    "name": "3",
+    "aliases": ["три"],
+    "logos": ["logos/3.png"]
+  },
+  "360": {
+    "name": "360",
+    "aliases": ["триста шестьдесят"],
+    "logos": ["logos/360.png"]
+  },
+  "360-news": {
+    "name": "360 Новости",
+    "aliases": ["360 новости", "360news", "новости 360"],
+    "logos": ["logos/360-news.png"]
+  },
+  "365-day": {
+    "name": "365 дней",
+    "aliases": ["365 дней", "триста шестьдесят пять"],
+    "logos": ["logos/365-day.png"]
+  },
+  "4": {
+    "name": "4",
+    "aliases": ["четыре"],
+    "logos": ["logos/4.png"]
+  },
+  "7": {
+    "name": "7",
+    "aliases": ["семь"],
+    "logos": ["logos/7.png"]
+  },
+  "78": {
+    "name": "78",
+    "aliases": ["семьдесят восемь"],
+    "logos": ["logos/78.png"]
+  },
+  "7tv": {
+    "name": "7TV",
+    "aliases": ["семь тв", "7 тв"],
+    "logos": ["logos/7tv.png"]
+  },
+  "actis": {
+    "name": "Актис",
+    "aliases": ["актис", "actis"],
+    "logos": ["logos/actis.png"]
+  },
+  "agro": {
+    "name": "Агро",
+    "aliases": ["агро", "agro"],
+    "logos": ["logos/agro.png"]
+  },
+  "altes": {
+    "name": "Альтес",
+    "aliases": ["альтес", "altes"],
+    "logos": ["logos/altes.png"]
+  },
+  "anecdote": {
+    "name": "Анекдот ТВ",
+    "aliases": ["анекдот", "anecdote", "анекдот тв"],
+    "logos": ["logos/anecdote.png"]
+  },
+  "aot": {
+    "name": "AOT",
+    "aliases": ["аот", "aot"],
+    "logos": ["logos/aot.png"]
+  },
+  "aqua": {
+    "name": "Аква",
+    "aliases": ["аква", "aqua"],
+    "logos": ["logos/aqua.png"]
+  },
+  "arhiz-24": {
+    "name": "Архыз 24",
+    "aliases": ["архыз", "arhiz", "архыз 24"],
+    "logos": ["logos/arhiz-24.png"]
+  },
+  "arsenal": {
+    "name": "Арсенал",
+    "aliases": ["арсенал", "arsenal"],
+    "logos": ["logos/arsenal.png"]
+  },
+  "astrahan-24": {
+    "name": "Астрахань 24",
+    "aliases": ["астр", "astrahan", "астр 24"],
+    "logos": ["logos/astrahan-24.png"]
+  },
+  "atv": {
+    "name": "ATV",
+    "aliases": ["атв", "aтв"],
+    "logos": ["logos/atv.png"]
+  },
+  "auto-24": {
+    "name": "Авто 24",
+    "aliases": ["авто24", "auto24", "авто"],
+    "logos": ["logos/auto-24.png"]
+  },
+  "auto-plus": {
+    "name": "Автоплюс",
+    "aliases": ["автоплюс", "авто плюс", "autoplius", "autoplus"],
+    "logos": ["logos/auto-plus.png"]
+  },
+  "balance": {
+    "name": "Баланс",
+    "aliases": ["баланс", "balance"],
+    "logos": ["logos/balance.png"]
+  },
+  "belarus-24": {
+    "name": "Беларусь 24",
+    "aliases": ["беларусь", "belarus", "бел24"],
+    "logos": ["logos/belarus-24.png"]
+  },
+  "belros": {
+    "name": "Белрос",
+    "aliases": ["белрос", "belros"],
+    "logos": ["logos/belros.png"]
+  },
+  "big-asia": {
+    "name": "Большая Азия",
+    "aliases": ["большая азия", "big asia"],
+    "logos": ["logos/big-asia.png"]
+  },
+  "bim": {
+    "name": "Бим",
+    "aliases": ["бим", "bim"],
+    "logos": ["logos/bim.png"]
+  },
+  "blockbuster": {
+    "name": "Блокбастер",
+    "aliases": ["блокбастер", "blockbuster"],
+    "logos": ["logos/blockbuster.png"]
+  },
+  "bober": {
+    "name": "Бобёр",
+    "aliases": ["бобер", "bober", "бобр"],
+    "logos": ["logos/bober.png"]
+  },
+  "boxing-tv": {
+    "name": "Бокс ТВ",
+    "aliases": ["бокс", "boxing", "boxing tv"],
+    "logos": ["logos/boxing-tv.png"]
+  },
+  "bravo-tv": {
+    "name": "Браво ТВ",
+    "aliases": ["браво", "bravo", "bravo tv"],
+    "logos": ["logos/bravo-tv.png"]
+  },
+  "bryansk-province": {
+    "name": "Брянская губерния",
+    "aliases": ["брянская", "bryansk"],
+    "logos": ["logos/bryansk-province.png"]
+  },
+  "bst": {
+    "name": "БСТ",
+    "aliases": ["бст", "bst"],
+    "logos": ["logos/bst.png"]
+  },
+  "bum-tv": {
+    "name": "Бум ТВ",
+    "aliases": ["бум", "bum", "bum tv"],
+    "logos": ["logos/bum-tv.png"]
+  },
+  "carousel": {
+    "name": "Карусель",
+    "aliases": ["карусель", "carousel", "карусель+"],
+    "logos": ["logos/carousel.png"]
+  },
+  "centre": {
+    "name": "Центр",
+    "aliases": ["центр", "centre"],
+    "logos": ["logos/centre.png"]
+  },
+  "dagestan": {
+    "name": "Дагестан",
+    "aliases": ["даг", "dagestan"],
+    "logos": ["logos/dagestan.png"]
+  },
+  "day-victory": {
+    "name": "День Победы",
+    "aliases": ["день победы", "9 мая", "victory day"],
+    "logos": ["logos/day-victory.png"]
+  },
+  "dialogues-about-fishing": {
+    "name": "Диалоги о рыбалке",
+    "aliases": ["диалоги", "рыбалка", "fishing"],
+    "logos": ["logos/dialogues-about-fishing.png"]
+  },
+  "doctor": {
+    "name": "Доктор",
+    "aliases": ["доктор", "doctor"],
+    "logos": ["logos/doctor.png"]
+  },
+  "domestic": {
+    "name": "Домашний",
+    "aliases": ["домашний", "domestic"],
+    "logos": ["logos/domestic.png"]
+  },
+  "domestic-animal": {
+    "name": "Домашние животные",
+    "aliases": ["животные", "домашние", "animals"],
+    "logos": ["logos/domestic-animal.png"]
+  },
+  "don-24": {
+    "name": "Дон 24",
+    "aliases": ["дон", "don", "дон24"],
+    "logos": ["logos/don-24.png"]
+  },
+  "dorama": {
+    "name": "Дорама ТВ",
+    "aliases": ["дорама", "dorama"],
+    "logos": ["logos/dorama.png"]
+  },
+  "eighth": {
+    "name": "Восьмой",
+    "aliases": ["восьмой", "8"],
+    "logos": ["logos/eighth.png"]
+  },
+  "eyes-of-turist": {
+    "name": "Глаза туриста",
+    "aliases": ["глаза туриста", "eyes of turist"],
+    "logos": ["logos/eyes-of-turist.png"]
+  },
+  "eyes-of-turist-4k": {
+    "name": "Глаза туриста 4K",
+    "aliases": ["глаза 4к", "eyes 4k"],
+    "logos": ["logos/eyes-of-turist-4k.png"]
+  },
+  "fifth": {
+    "name": "Пятый канал",
+    "aliases": ["пятый", "5 канал", "fifth"],
+    "logos": ["logos/fifth.png"]
+  },
+  "fight-club": {
+    "name": "Бойцовский клуб",
+    "aliases": ["бойцовский", "fight club"],
+    "logos": ["logos/fight-club.png"]
+  },
+  "first": {
+    "name": "Первый канал",
+    "aliases": ["первый", "1тв", "один", "first", "1"],
+    "logos": ["logos/first.png"]
+  },
+  "first-hd": {
+    "name": "Первый HD",
+    "aliases": ["первый хд", "первый hd", "first hd"],
+    "logos": ["logos/first-hd.png"]
+  },
+  "home-movie": {
+    "name": "Дом Кино",
+    "aliases": ["дом кино", "home movie", "домкино"],
+    "logos": ["logos/home-movie.png"]
+  },
+  "home-movie-premium": {
+    "name": "Дом Кино Премиум",
+    "aliases": ["дом кино премиум", "home movie premium", "домкинопремиум"],
+    "logos": ["logos/home-movie-premium.png"]
+  },
+  "in-animal-world": {
+    "name": "В мире животных",
+    "aliases": ["мир животных", "в мире животных", "animals"],
+    "logos": ["logos/in-animal-world.png"]
+  },
+  "kids-movie": {
+    "name": "Детское кино",
+    "aliases": ["детское кино", "kids movie", "кино для детей"],
+    "logos": ["logos/kids-movie.png"]
+  },
+  "kids-world": {
+    "name": "Детский мир",
+    "aliases": ["детский мир", "kids world"],
+    "logos": ["logos/kids-world.png"]
+  },
+  "leopard": {
+    "name": "Леопард",
+    "aliases": ["леопард", "leopard"],
+    "logos": ["logos/leopard.png"]
+  },
+  "match": {
+    "name": "Матч ТВ",
+    "aliases": ["матч", "match", "матчтв", "матч!", "match tv"],
+    "logos": ["logos/match.png"]
+  },
+  "match-arena": {
+    "name": "Матч Арена",
+    "aliases": ["матч арена", "match arena"],
+    "logos": ["logos/match-arena.png"]
+  },
+  "match-country": {
+    "name": "Матч Страна",
+    "aliases": ["матч страна", "match country"],
+    "logos": ["logos/match-country.png"]
+  },
+  "match-fighter": {
+    "name": "Матч Боец",
+    "aliases": ["матч боец", "match fighter", "бои"],
+    "logos": ["logos/match-fighter.png"]
+  },
+  "match-football-1": {
+    "name": "Матч Футбол 1",
+    "aliases": ["матч футбол 1", "match football 1", "футбол 1"],
+    "logos": ["logos/match-football-1.png"]
+  },
+  "match-football-2": {
+    "name": "Матч Футбол 2",
+    "aliases": ["матч футбол 2", "match football 2", "футбол 2"],
+    "logos": ["logos/match-football-2.png"]
+  },
+  "match-football-3": {
+    "name": "Матч Футбол 3",
+    "aliases": ["матч футбол 3", "match football 3", "футбол 3"],
+    "logos": ["logos/match-football-3.png"]
+  },
+  "match-game": {
+    "name": "Матч Игра",
+    "aliases": ["матчивгра", "match game", "матч игра"],
+    "logos": ["logos/match-game.png"]
+  },
+  "match-hd": {
+    "name": "Матч HD",
+    "aliases": ["матч хд", "match hd"],
+    "logos": ["logos/match-hd.png"]
+  },
+  "match-planet": {
+    "name": "Матч Планета",
+    "aliases": ["матч планета", "match planet"],
+    "logos": ["logos/match-planet.png"]
+  },
+  "match-prime": {
+    "name": "Матч Премьер",
+    "aliases": ["матчпремьер", "матч премьер", "match premier", "матч! премьер"],
+    "logos": ["logos/match-prime.png"]
+  },
+  "mountain-country": {
+    "name": "Горная страна",
+    "aliases": ["горная", "mountain country"],
+    "logos": ["logos/mountain-country.png"]
+  },
+  "mus": {
+    "name": "Муз-ТВ",
+    "aliases": ["музтв", "muztv", "музыка"],
+    "logos": ["logos/mus.png"]
+  },
+  "music-fashion": {
+    "name": "Музыкальная мода",
+    "aliases": ["музмода", "music fashion"],
+    "logos": ["logos/music-fashion.png"]
+  },
+  "n": {
+    "name": "НТВ",
+    "aliases": ["нтв", "n", "энтэвэ"],
+    "logos": ["logos/n.png"]
+  },
+  "n-hd": {
+    "name": "НТВ HD",
+    "aliases": ["нтв хд", "n hd"],
+    "logos": ["logos/n-hd.png"]
+  },
+  "n-hit": {
+    "name": "НТВ Хит",
+    "aliases": ["нтв хит", "n hit"],
+    "logos": ["logos/n-hit.png"]
+  },
+  "n-right": {
+    "name": "НТВ Право",
+    "aliases": ["нтв право", "n right"],
+    "logos": ["logos/n-right.png"]
+  },
+  "n-serial": {
+    "name": "НТВ Сериал",
+    "aliases": ["нтв сериал", "n serial"],
+    "logos": ["logos/n-serial.png"]
+  },
+  "n-style": {
+    "name": "НТВ Стиль",
+    "aliases": ["нтв стиль", "n style"],
+    "logos": ["logos/n-style.png"]
+  },
+  "nine": {
+    "name": "Девятый",
+    "aliases": ["девятый", "9"],
+    "logos": ["logos/nine.png"]
+  },
+  "ninth-wave": {
+    "name": "Девятая волна",
+    "aliases": ["девятая волна", "ninth wave"],
+    "logos": ["logos/ninth-wave.png"]
+  },
+  "otr-1": {
+    "name": "ОТР 1",
+    "aliases": ["отр", "otr", "общественное тв"],
+    "logos": ["logos/otr-1.png"]
+  },
+  "otv": {
+    "name": "ОТВ",
+    "aliases": ["отв", "otv"],
+    "logos": ["logos/otv.png"]
+  },
+  "province-33": {
+    "name": "Провинция 33",
+    "aliases": ["провинция", "province", "33"],
+    "logos": ["logos/province-33.png"]
+  },
+  "province-habarovsk": {
+    "name": "Провинция Хабаровск",
+    "aliases": ["хабаровск", "habarovsk"],
+    "logos": ["logos/province-habarovsk.png"]
+  },
+  "province-samara": {
+    "name": "Провинция Самара",
+    "aliases": ["самара", "samara"],
+    "logos": ["logos/province-samara.png"]
+  },
+  "questions-and-answers": {
+    "name": "Вопросы и ответы",
+    "aliases": ["вопросы", "questions and answers"],
+    "logos": ["logos/questions-and-answers.png"]
+  },
+  "rain": {
+    "name": "Дождь",
+    "aliases": ["дождь", "tvrain", "дождьтв", "дожть"],
+    "logos": ["logos/rain.png"]
+  },
+  "ren": {
+    "name": "РЕН ТВ",
+    "aliases": ["рен", "рентв", "ren", "ren tv"],
+    "logos": ["logos/ren.png"]
+  },
+  "ren-hd": {
+    "name": "РЕН ТВ HD",
+    "aliases": ["рен хд", "ren hd"],
+    "logos": ["logos/ren-hd.png"]
+  },
+  "russia-1": {
+    "name": "Россия 1",
+    "aliases": ["россия1", "россия 1", "russia1", "россия-1"],
+    "logos": ["logos/russia-1.png"]
+  },
+  "russia-1-hd-1": {
+    "name": "Россия 1 HD",
+    "aliases": ["россия1 хд", "russia1 hd"],
+    "logos": ["logos/russia-1-hd-1.png"]
+  },
+  "russia-24": {
+    "name": "Россия 24",
+    "aliases": ["россия24", "russia24"],
+    "logos": ["logos/russia-24.png"]
+  },
+  "russia-culture": {
+    "name": "Россия Культура",
+    "aliases": ["россия к", "культура", "россия-к", "rossiya-k"],
+    "logos": ["logos/russia-culture.png"]
+  },
+  "saved": {
+    "name": "Спас",
+    "aliases": ["спас", "saved"],
+    "logos": ["logos/saved.png"]
+  },
+  "star": {
+    "name": "Звезда",
+    "aliases": ["звезда", "star", "звезда тв", "zvezda"],
+    "logos": ["logos/star.png"]
+  },
+  "star-plus": {
+    "name": "Звезда Плюс",
+    "aliases": ["звезда+", "star plus", "звезда плюс"],
+    "logos": ["logos/star-plus.png"]
+  },
+  "stork": {
+    "name": "Аист",
+    "aliases": ["аист", "stork"],
+    "logos": ["logos/stork.png"]
+  },
+  "sts": {
+    "name": "СТС",
+    "aliases": ["стс", "sts", "стств"],
+    "logos": ["logos/sts.png"]
+  },
+  "sts-hd": {
+    "name": "СТС HD",
+    "aliases": ["стс хд", "sts hd"],
+    "logos": ["logos/sts-hd.png"]
+  },
+  "sts-kids": {
+    "name": "СТС Kids",
+    "aliases": ["стс кидс", "sts kids"],
+    "logos": ["logos/sts-kids.png"]
+  },
+  "sts-love": {
+    "name": "СТС Love",
+    "aliases": ["стслав", "sts love", "стс лав", "лав"],
+    "logos": ["logos/sts-love.png"]
+  },
+  "time": {
+    "name": "Время",
+    "aliases": ["время", "time"],
+    "logos": ["logos/time.png"]
+  },
+  "tnt": {
+    "name": "ТНТ",
+    "aliases": ["тнт", "tnt", "тнт основной"],
+    "logos": ["logos/tnt.png"]
+  },
+  "tnt-4": {
+    "name": "ТНТ 4",
+    "aliases": ["тнт4", "tnt4", "тнт 4", "тнт-4"],
+    "logos": ["logos/tnt-4.png"]
+  },
+  "tnt-hd": {
+    "name": "ТНТ HD",
+    "aliases": ["тнт хд", "tnt hd"],
+    "logos": ["logos/tnt-hd.png"]
+  },
+  "tnt-music": {
+    "name": "ТНТ Music",
+    "aliases": ["тнтмузык", "tnt music", "тнт музык"],
+    "logos": ["logos/tnt-music.png"]
+  },
+  "together-rf": {
+    "name": "Вместе РФ",
+    "aliases": ["вместе рф", "together rf"],
+    "logos": ["logos/together-rf.png"]
+  },
+  "town": {
+    "name": "Город",
+    "aliases": ["город", "town"],
+    "logos": ["logos/town.png"]
+  },
+  "vetta-24": {
+    "name": "Ветта 24",
+    "aliases": ["ветта", "vetta"],
+    "logos": ["logos/vetta-24.png"]
+  },
+  "visiting-fairy-tales": {
+    "name": "В гостях у сказки",
+    "aliases": ["в гостях у сказки", "сказки", "fairy tales"],
+    "logos": ["logos/visiting-fairy-tales.png"]
+  },
+  "volga": {
+    "name": "Волга",
+    "aliases": ["волга", "volga"],
+    "logos": ["logos/volga.png"]
+  },
+  "volgograd-24": {
+    "name": "Волгоград 24",
+    "aliases": ["волгоград", "volgograd"],
+    "logos": ["logos/volgograd-24.png"]
+  },
+  "vostok-24": {
+    "name": "Восток 24",
+    "aliases": ["восток", "vostok"],
+    "logos": ["logos/vostok-24.png"]
+  },
+  "vostok-express": {
+    "name": "Восток Экспресс",
+    "aliases": ["восток экспресс", "vostok express"],
+    "logos": ["logos/vostok-express.png"]
+  },
+  "vostok-tv": {
+    "name": "Восток ТВ",
+    "aliases": ["восток тв", "vostok tv"],
+    "logos": ["logos/vostok-tv.png"]
+  },
+  "wild": {
+    "name": "В дикой природе",
+    "aliases": ["дикие", "wild"],
+    "logos": ["logos/wild.png"]
+  },
+  "wild-fishing": {
+    "name": "Дикая рыбалка",
+    "aliases": ["дикие рыбалка", "wild fishing"],
+    "logos": ["logos/wild-fishing.png"]
+  },
+  "wild-hunt": {
+    "name": "Дикая охота",
+    "aliases": ["дикие охота", "wild hunt"],
+    "logos": ["logos/wild-hunt.png"]
+  },
+  "wild-international": {
+    "name": "Wild International",
+    "aliases": ["wild international", "дикие международный"],
+    "logos": ["logos/wild-international.png"]
+  },
+  "world": {
+    "name": "Мир",
+    "aliases": ["мир", "mir", "world"],
+    "logos": ["logos/world.png"]
+  },
+  "world-24": {
+    "name": "Мир 24",
+    "aliases": ["мир24", "mir24", "world24"],
+    "logos": ["logos/world-24.png"]
+  },
+  "world-hd": {
+    "name": "Мир HD",
+    "aliases": ["мир хд", "world hd"],
+    "logos": ["logos/world-hd.png"]
+  }
+}
