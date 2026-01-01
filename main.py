@@ -9,7 +9,7 @@ from aiogram.utils.keyboard import InlineKeyboardBuilder
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
 from reportlab.lib.utils import ImageReader
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 import asyncio
@@ -18,8 +18,11 @@ import threading
 # === ЗАГРУЗКА НАСТРОЕК ===
 load_dotenv()
 TOKEN = os.getenv("BOT_TOKEN")
+WEBHOOK_URL = os.getenv("WEBHOOK_URL")  # Например: https://tv-logos-bot.up.railway.app
 if not TOKEN:
     raise ValueError("❌ BOT_TOKEN не найден в .env")
+if not WEBHOOK_URL:
+    raise ValueError("❌ WEBHOOK_URL не задан")
 
 CHANNELS_FILE = "channels.json"
 GALLERY_FILE = "gallery.json"
@@ -280,8 +283,20 @@ async def clear_cancel(callback, bot):
 
 dp.include_router(router)
 
-# === HEALTHCHECK (FastAPI) ===
-app = FastAPI(title="TV Logos Bot Healthcheck")
+# === WEBHOOK (FastAPI) ===
+app = FastAPI(title="TV Logos Bot Webhook")
+
+@app.on_event("startup")
+async def on_startup():
+    webhook_url = f"{WEBHOOK_URL}/webhook"
+    await bot.set_webhook(webhook_url)
+    print(f"✅ Webhook установлен: {webhook_url}")
+
+@app.post("/webhook")
+async def webhook(request: Request):
+    update = await request.json()
+    await dp.feed_update(bot, update)
+    return {"ok": True}
 
 @app.get("/")
 async def health():
@@ -291,20 +306,7 @@ async def health():
 async def ping():
     return {"pong": True}
 
-# Запуск бота в отдельном потоке
-def run_bot():
-    import asyncio
-    asyncio.run(dp.start_polling(bot))
-
-# Запуск FastAPI сервера
-def run_server():
-    uvicorn.run(app, host="0.0.0.0", port=int(os.getenv("PORT", 8000)))
-
+# Запуск сервера
 if __name__ == "__main__":
-    # Запускаем FastAPI в основном потоке
-    server_thread = threading.Thread(target=run_server)
-    server_thread.start()
-
-    # Запускаем бота в отдельном потоке
-    bot_thread = threading.Thread(target=run_bot)
-    bot_thread.start()
+    port = int(os.getenv("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
