@@ -12,17 +12,17 @@ from reportlab.lib.utils import ImageReader
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
-import asyncio
-import threading
 
 # === ЗАГРУЗКА НАСТРОЕК ===
 load_dotenv()
 TOKEN = os.getenv("BOT_TOKEN")
-WEBHOOK_URL = os.getenv("WEBHOOK_URL")  # Например: https://tv-logos-bot.up.railway.app
+WEBHOOK_PATH = "/webhook"
+WEBHOOK_URL = os.getenv("WEBHOOK_URL", "").rstrip("/") + WEBHOOK_PATH
+
 if not TOKEN:
     raise ValueError("❌ BOT_TOKEN не найден в .env")
-if not WEBHOOK_URL:
-    raise ValueError("❌ WEBHOOK_URL не задан")
+if not WEBHOOK_URL.startswith("https://"):
+    raise ValueError("❌ WEBHOOK_URL должен начинаться с https://")
 
 CHANNELS_FILE = "channels.json"
 GALLERY_FILE = "gallery.json"
@@ -262,7 +262,7 @@ async def clear_now(callback, bot):
         save_gallery()
         await callback.message.answer(f"🧹 Подборка очищена ({count} логотипов удалено).")
     else:
-        await callback.message.answer("ostringstream Подборка и так пуста.")
+        await callback.message.answer("📭 Подборка и так пуста.")
 
 @router.callback_query(lambda c: c.data.startswith("clear_confirm:"))
 async def clear_confirm(callback, bot):
@@ -288,11 +288,14 @@ app = FastAPI(title="TV Logos Bot Webhook")
 
 @app.on_event("startup")
 async def on_startup():
-    webhook_url = f"{WEBHOOK_URL}/webhook"
-    await bot.set_webhook(webhook_url)
-    print(f"✅ Webhook установлен: {webhook_url}")
+    await bot.set_webhook(WEBHOOK_URL)
+    print(f"✅ Webhook установлен: {WEBHOOK_URL}")
 
-@app.post("/webhook")
+@app.on_event("shutdown")
+async def on_shutdown():
+    await bot.delete_webhook(drop_pending_updates=True)
+
+@app.post(WEBHOOK_PATH)
 async def webhook(request: Request):
     update = await request.json()
     await dp.feed_update(bot, update)
@@ -306,7 +309,6 @@ async def health():
 async def ping():
     return {"pong": True}
 
-# Запуск сервера
 if __name__ == "__main__":
     port = int(os.getenv("PORT", 8000))
     uvicorn.run(app, host="0.0.0.0", port=port)
