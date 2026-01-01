@@ -9,6 +9,11 @@ from aiogram.utils.keyboard import InlineKeyboardBuilder
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
 from reportlab.lib.utils import ImageReader
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+import uvicorn
+import asyncio
+import threading
 
 # === ЗАГРУЗКА НАСТРОЕК ===
 load_dotenv()
@@ -254,7 +259,7 @@ async def clear_now(callback, bot):
         save_gallery()
         await callback.message.answer(f"🧹 Подборка очищена ({count} логотипов удалено).")
     else:
-        await callback.message.answer("📭 Подборка и так пуста.")
+        await callback.message.answer("ostringstream Подборка и так пуста.")
 
 @router.callback_query(lambda c: c.data.startswith("clear_confirm:"))
 async def clear_confirm(callback, bot):
@@ -275,7 +280,31 @@ async def clear_cancel(callback, bot):
 
 dp.include_router(router)
 
-if __name__ == "__main__":
-    print(f"✅ Бот запущен. Каналов: {len(CHANNELS)}")
+# === HEALTHCHECK (FastAPI) ===
+app = FastAPI(title="TV Logos Bot Healthcheck")
+
+@app.get("/")
+async def health():
+    return {"status": "ok", "message": "Bot is running"}
+
+@app.get("/ping")
+async def ping():
+    return {"pong": True}
+
+# Запуск бота в отдельном потоке
+def run_bot():
     import asyncio
     asyncio.run(dp.start_polling(bot))
+
+# Запуск FastAPI сервера
+def run_server():
+    uvicorn.run(app, host="0.0.0.0", port=int(os.getenv("PORT", 8000)))
+
+if __name__ == "__main__":
+    # Запускаем FastAPI в основном потоке
+    server_thread = threading.Thread(target=run_server)
+    server_thread.start()
+
+    # Запускаем бота в отдельном потоке
+    bot_thread = threading.Thread(target=run_bot)
+    bot_thread.start()
