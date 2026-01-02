@@ -4,13 +4,11 @@ from pathlib import Path
 from dotenv import load_dotenv
 from aiogram import Bot, Dispatcher, Router
 from aiogram.filters import Command
-from aiogram.types import Message, FSInputFile, InlineKeyboardButton, Update
+from aiogram.types import Message, FSInputFile, InlineKeyboardButton
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
 from reportlab.lib.utils import ImageReader
-from fastapi import FastAPI, Request
-from contextlib import asynccontextmanager
 
 # === ЗАГРУЗКА НАСТРОЕК ===
 load_dotenv()
@@ -18,15 +16,6 @@ TOKEN = os.getenv("BOT_TOKEN")
 if not TOKEN:
     raise ValueError("❌ BOT_TOKEN не найден в .env")
 
-WEBHOOK_PATH = "/webhook"
-WEBHOOK_URL = os.getenv("WEBHOOK_URL", "").rstrip("/")
-
-if not WEBHOOK_URL:
-    raise ValueError("❌ WEBHOOK_URL не задан в Variables")
-if not WEBHOOK_URL.startswith("https://"):
-    raise ValueError("❌ WEBHOOK_URL должен начинаться с https://")
-
-# === ПУТИ ===
 CHANNELS_FILE = "channels.json"
 GALLERY_FILE = "gallery.json"
 PDF_DIR = Path("pdfs")
@@ -286,44 +275,7 @@ async def clear_cancel(callback, bot):
 
 dp.include_router(router)
 
-# === LIFESPAN (вместо on_event) ===
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    webhook_url = WEBHOOK_URL + WEBHOOK_PATH
-    print(f"🔧 Устанавливаю вебхук: {webhook_url}")
-    try:
-        # 🔑 Ключевой вызов — без него Telegram не знает URL
-        await bot.set_webhook(webhook_url, drop_pending_updates=True)
-        info = await bot.get_webhook_info()
-        print(f"✅ Вебхук активен: {info.url}")
-        print(f"📥 pending_update_count: {info.pending_update_count}")
-        if info.last_error_message:
-            print(f"⚠️ Последняя ошибка: {info.last_error_message}")
-    except Exception as e:
-        print(f"❌ Ошибка установки вебхука: {e}")
-    yield
-    # Очистка при остановке
-    await bot.delete_webhook(drop_pending_updates=True)
-
-app = FastAPI(lifespan=lifespan)
-
-@app.post(WEBHOOK_PATH)
-async def webhook(request: Request):
-    update = await request.json()
-    update_obj = Update.model_validate(update)
-    await dp.feed_update(bot, update_obj)
-    return {"ok": True}
-
-@app.get("/")
-async def health():
-    return {"status": "ok", "message": "Bot is running"}
-
-@app.get("/ping")
-async def ping():
-    return {"pong": True}
-
-# === ЗАПУСК ===
 if __name__ == "__main__":
-    port = int(os.getenv("PORT", 8000))
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=port)
+    print(f"✅ Бот запущен. Каналов: {len(CHANNELS)}")
+    import asyncio
+    asyncio.run(dp.start_polling(bot))
