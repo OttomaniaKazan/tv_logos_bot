@@ -289,8 +289,21 @@ dp.include_router(router)
 # === LIFESPAN (вместо on_event) ===
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    print("🚀 Бот запущен. Вебхук уже установлен.")
+    webhook_url = WEBHOOK_URL + WEBHOOK_PATH
+    print(f"🔧 Устанавливаю вебхук: {webhook_url}")
+    try:
+        # 🔑 Ключевой вызов — без него Telegram не знает URL
+        await bot.set_webhook(webhook_url, drop_pending_updates=True)
+        info = await bot.get_webhook_info()
+        print(f"✅ Вебхук активен: {info.url}")
+        print(f"📥 pending_update_count: {info.pending_update_count}")
+        if info.last_error_message:
+            print(f"⚠️ Последняя ошибка: {info.last_error_message}")
+    except Exception as e:
+        print(f"❌ Ошибка установки вебхука: {e}")
     yield
+    # Очистка при остановке
+    await bot.delete_webhook(drop_pending_updates=True)
 
 app = FastAPI(lifespan=lifespan)
 
